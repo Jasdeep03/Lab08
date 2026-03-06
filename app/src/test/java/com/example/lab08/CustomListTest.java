@@ -32,14 +32,14 @@ public class CustomListTest {
         list.addCity(calgary);
         assertEquals(1, list.countCities());
         City edmonton = new City("Edmonton", "AB");
+        list.addCity(edmonton);
         assertEquals(2, list.countCities());
         list.delete(calgary);
         assertEquals(1, list.countCities());
     }
 
-    }
-
-
-
-
 }
+
+
+
+
