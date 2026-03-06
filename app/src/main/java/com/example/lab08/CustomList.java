@@ -1,6 +1,7 @@
 package com.example.lab08;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class CustomList {
@@ -14,10 +15,22 @@ public class CustomList {
         cities.add(city);
     }
 
-    
-
     // Will be implemented later using TDD (leave blank for now)
     public boolean hasCity(City city) {
         return cities.contains(city);
     }
+    public List<City> getCities() {
+        return cities;
+    }
+
+    public void delete(City city){
+        if (!hasCity(city)){
+            throw new IllegalArgumentException();
+        }
+        cities.remove(city);
+    }
+
+
+
+
 }

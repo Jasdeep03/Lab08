@@ -20,10 +20,12 @@ public class CustomListTest {
         CustomList list = new CustomList();
         City calgary = new City("Calgary", "AB");
         list.addCity(calgary);
-        assertEquals(2, list.getCities().size());
-        list.delete(list);
         assertEquals(1, list.getCities().size());
+        list.delete(calgary);
+        assertEquals(0, list.getCities().size());
     }
+
+
 
 
 }
